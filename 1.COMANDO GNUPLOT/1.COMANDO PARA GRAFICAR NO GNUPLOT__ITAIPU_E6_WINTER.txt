@@ -1,0 +1,61 @@
+!*************************************************************************************************************
+! COMANDOS PARA GRAFICAR O CAMPO DE TEMPERATURA
+!*************************************************************************************************************
+      
+set pm3d map
+set autoscale fix
+set palette defined (14 'white', 16 'blue', 17 'green', 18 'yellow', 19 'orange', 20.18 'red')    
+unset key
+plot 'SAIDA1_THERMAL_GRAPHIC_MATRIX.txt' matrix using ($1+2):($2+2):3 with image      
+
+!*************************************************************************************************************
+! COMANDOS PARA GRAFICAR O CAMPO DE DESLOCAMENTOS TÉRMICOS NA DIREÇÃO X
+!*************************************************************************************************************
+      
+set pm3d map
+set autoscale fix
+set palette defined (-20.0 'red', -15.0 'orange', -10.0 'yellow', -5.0 'green', 0 'blue', 0.01'white')  
+unset key
+plot 'SAIDA2_X_TS_DISP_GRAPHIC_MATRIX.txt' matrix using ($1+2):($2+2):3 with image  
+
+!*************************************************************************************************************
+! COMANDOS PARA GRAFICAR O CAMPO DE DESLOCAMENTOS TÉRMICOS NA DIREÇÃO Y
+!*************************************************************************************************************      
+set pm3d map
+set autoscale fix
+set palette defined (-10'red', -5'orange', -4'yellow', -3'green', 1.4'blue' , 2.0'white')  
+unset key
+plot 'SAIDA3_Y_TS_DISP_GRAPHIC_MATRIX.txt' matrix using ($1+2):($2+2):3 with image    
+
+
+!*************************************************************************************************************
+! COMANDOS PARA GRAFICAR O CAMPO DE TENSÕES EM X
+!*************************************************************************************************************
+      
+set pm3d map
+set autoscale fix
+set palette defined (-0.016 'blue', -0.001 'green', 0 'yellow', 0.0005 'orange', 0.002 'red', 0.004 'white')    
+unset key
+plot 'SAIDA4_X_TS__STRESS_GRAPHIC_MATRIX.txt' matrix using ($1+2):($2+2):3 with image   
+
+
+!*************************************************************************************************************
+! COMANDOS PARA GRAFICAR O CAMPO DE TENSÕES EM Y
+!*************************************************************************************************************
+      
+set pm3d map
+set autoscale fix
+set palette defined (-0.010 'blue', -0.0010 'green', 0 'yellow', 0.0001 'orange', 0.002 'red', 0.004 'white')    
+unset key
+plot 'SAIDA5_Y_TS__STRESS_GRAPHIC_MATRIX.txt' matrix using ($1+2):($2+2):3 with image  
+
+
+!*************************************************************************************************************
+! COMANDOS PARA GRAFICAR O CAMPO DE TENSÕES EM Z
+!*************************************************************************************************************
+      
+set pm3d map
+set autoscale fix
+set palette defined (-0.008 'blue', -0.003 'green', 0 'yellow', 0.0001 'orange', 0.002 'red', 0.005 'white')    
+unset key
+plot 'SAIDA6_Z_TS__STRESS_GRAPHIC_MATRIX.txt' matrix using ($1+2):($2+2):3 with image     
